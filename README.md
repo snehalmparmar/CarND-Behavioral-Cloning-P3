@@ -6,7 +6,7 @@
 
 The goal of this project is to use deep neural networks and convolutional neural networks to clone driving behavior using Keras. The model will output a steering angle to an autonomous vehicle. Udacity provides a simulator where we can steer a car around a track for data collection. I'll use image data and steering angles to train a neural network and then use this model to drive the car autonomously around the track.
 
-![BehavioralPlanning]()
+![Behavioral Planning](https://github.com/snehalmparmar/CarND-Behavioral-Cloning-P3/blob/master/video.gif)
 ## The Project
 The goals / steps of this project are the following:
 
@@ -65,6 +65,8 @@ ls run1
 2019_12_28_02_30_25_720.jpg
 2019_12_28_02_31_30_455.jpg
 2019_12_28_02_32_36_656.jpg
+
+```
 
 The image file name is a timestamp of when the image was seen. This information is used by `video.py` to create a chronological video of the agent driving.
 
