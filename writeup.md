@@ -24,9 +24,9 @@ The goals / steps of this project are the following:
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
-####1. Submission includes all required files and can be used to run the simulator in autonomous mode
+#### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 
@@ -35,7 +35,7 @@ My project includes the following files:
 * **model.h5** containing a trained convolution neural network 
 * **writeup.md** summarizing the results
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing the following command:
 
@@ -43,13 +43,13 @@ Using the Udacity provided simulator and my drive.py file, the car can be driven
 python drive.py model.h5
 ```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 
 The model used in my project is based on the Nvidia DNN from the [End to End Learning for Self-Driving Cars paper](https://arxiv.org/pdf/1604.07316v1.pdf). It shows better performance than the LeNet-5 model that I used before. 
 
@@ -83,13 +83,13 @@ The Adam optimizer was chosen with the default parameters to optimize the mean s
 | ELU             |                                                                 |
 | **Fully connected** | Inputs 10, outputs 1                                        |
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 L2 regularization has been added to each layer in order to reduce overfitting. 
 
 Moreover, the model was trained on data properly collected to ensure the car is not biased toward certains steering angles. See section **'4. Appropriate training data'** for more details.
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 As mention before, the model use an adam optimizer with a learning rate equal to 0.0001. 
 
@@ -99,7 +99,7 @@ The batch size was kept to a minimum of 32 samples.
 
 The data was splitted between training and validation data using a rate of 0.2 for the validation set.
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road as close to the center as possible. I trained it for three laps. In addition to that, I drove the car for one lap counter-clockwise to avoid the data being biased towards left turns. It also tends to reduce overfitting and helps the model generalizes better.
 
@@ -107,9 +107,9 @@ Finally, I've used recovery driving from the sides where the car was going off t
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to use an iterative proccess. I've switched very often between tuning/training and testing on the track. It helped me a lot to understand how well or bad my changes was helping the model.
 
@@ -125,11 +125,11 @@ There were a few spots where the vehicle fell off the track. To improve the driv
 
 Between each change I run the simulator to see how well the car was driving around track one. At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 The final model architecture has been described in section **'1. An appropriate model architecture has been employed'**.
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded three laps on track one using center lane driving. Here are example images of center lane driving:
 
